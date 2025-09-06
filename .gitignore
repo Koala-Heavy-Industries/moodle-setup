@@ -1,0 +1,105 @@
+# Moodle Docker Environment .gitignore
+
+# =========================
+# Moodle Files & Data
+# =========================
+# Moodleソースコード（ダウンロード版）
+moodle/
+# Moodleデータディレクトリ
+moodledata/
+
+# =========================
+# Database
+# =========================
+# PostgreSQLデータディレクトリ
+postgres_data/
+
+# =========================
+# Environment & Secrets
+# =========================
+# 環境変数ファイル（機密情報を含む場合）
+.env.local
+.env.production
+.env.*.local
+# 本番用設定
+config.local.php
+
+# =========================
+# Docker
+# =========================
+# Docker Composeオーバーライド
+docker-compose.override.yml
+# Docker build context
+.dockerignore
+
+# =========================
+# IDE & Editor
+# =========================
+# Claude Code設定
+.claude/
+# VSCode
+.vscode/
+# PhpStorm
+.idea/
+# Vim
+*.swp
+*.swo
+*~
+
+# =========================
+# OS Files
+# =========================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# =========================
+# Temporary & Cache
+# =========================
+# 一時ファイル
+*.tmp
+*.temp
+*.log
+*.cache
+
+# バックアップファイル
+*.backup
+*.bak
+backup_*
+*.sql.gz
+*.tar.gz.backup
+
+# =========================
+# SSL Certificates (if used)
+# =========================
+*.key
+*.crt
+*.pem
+*.p12
+ssl/
+
+# =========================
+# Custom
+# =========================
+# カスタムスクリプト（機密情報を含む場合）
+scripts/private/
+# テスト用ファイル
+test-*
+*.test
